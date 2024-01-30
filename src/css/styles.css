@@ -1,0 +1,351 @@
+body {
+  background-color: #000000;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.cabecalho {
+  height: 60px;
+  background-color: #0b0b0b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #282828;
+}
+
+.cabecalho .logo {
+  display: flex;
+  height: 35px;
+  gap: 10px;
+  color: rgb(0, 174, 255);
+}
+
+.cabecalho .logo .diablo-logo {
+  height: 40px;
+}
+
+.cabecalho .menu {
+  display: flex;
+  gap: 10px;
+}
+
+.cabecalho .menu li a {
+  padding: 20px;
+  color: #e8e8e8;
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.cabecalho .menu li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.home {
+  display: flex;
+  position: relative;
+  min-height: calc(100vh - 80px);
+  align-items: center;
+  justify-content: center;
+}
+
+.home .bg_video {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plataforms {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  top: 55%;
+  left: 24%;
+}
+
+.modal #logo-diablo-modal {
+  width: 35%;
+  height: 35%;
+  display: flex;
+  position: absolute;
+  left: 38.5%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.modal h2 {
+  margin-top: -50px;
+}
+
+.plataforms svg {
+  cursor: pointer;
+  background: transparent;
+  right: 37px;
+  width: 80px;
+  height: 80px;
+  gap: 20px;
+}
+
+.plataforms p {
+  transition: filter 0.3s ease-out;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  background-color: #000000;
+  border-radius: 10px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.96);
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal 0.4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+span {
+  margin: 10px auto;
+}
+
+.btn-ok .btnOK {
+  font-size: medium;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: absolute;
+  margin-top: 40%;
+}
+
+.home .informations img {
+  height: 60%;
+  width: 60%;
+  margin-left: 160px;
+}
+
+.home .informations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto;
+  max-width: 1500px;
+  text-align: center;
+}
+
+.informations svg {
+  color: rgba(255, 255, 255, 0.9);
+  transition: filter 0.3s ease-out;
+  cursor: pointer;
+  fill: #fff;
+  background: transparent;
+  align-items: center;
+  position: relative;
+  margin-top: 26px;
+  margin-left: 70px;
+}
+
+.home .informations li svg {
+  margin-top: 20px;
+}
+
+.home .informations svg:hover {
+  filter: drop-shadow(0 0 6px #df5a43);
+}
+
+.home .informations svg:hover + p {
+  filter: drop-shadow(0 0 6px #df5a43);
+}
+
+.home .informations .lista-de-jogos {
+  display: flex;
+  gap: 32px;
+}
+
+.btn-comprar {
+  background-image: url(https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt9cbde4efd9bd70a6/62885697916fe131b16a8a1e/d4-button-filigree-left.png?auto=webp),
+    url(https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt81d432069a265981/628856977af0830baa3c14c0/d4-button-filigree-right.png?auto=webp),
+    url(https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltef876b15b03337eb/62885696202fdb31b01a8263/d4-button-filigree-center.png?auto=webp),
+    url(https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt9b78ec729a6755b9/628853a20b5a483bd605760b/d4-button-primary-left-hover.png?auto=webp),
+    url(https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltde34216b1c9a77ee/628853a23e3d224456bf08f3/d4-button-primary-right-hover.png?auto=webp),
+    url(https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt2f472a0c13559067/628853a9d1dfb243261ca973/d4-button-primary-tile-hover.jpg?auto=webp);
+  background-color: transparent;
+  border: none;
+  margin: 50px 280px;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 35px 10px;
+  width: calc(100% - var(--size-150));
+  height: calc(100% - var(--size-150));
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.66));
+  transition: all 0.3s ease-in;
+  align-items: inherit;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: auto 100%, auto 100%, auto 100%, auto calc(100% - 20px),
+    auto calc(100% - 20px), 82% calc(100% - 20px);
+  background-position: left center, right center, center center, 10px center,
+    calc(100% - 10px) center, center center;
+}
+
+.btn-plataform {
+  background-color: #282828;
+  width: 100%;
+}
+
+.btn-comprar:hover {
+  color: #000;
+}
+
+.compra {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  align-items: center;
+  position: relative;
+  align-items: center;
+}
+
+.compra .cartao .lilith-compra {
+  box-sizing: border-box;
+}
+.compra .titulo {
+  font-size: 50px;
+  font-weight: 700;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.compra .cartao p {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.compra .edicoes p {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+.compra .edicoes h3 {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.comparison {
+  display: flex;
+  margin-left: 250px;
+  margin-top: -300px;
+}
+
+.comparison-item img {
+  width: 80%;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.features span {
+  position: relative;
+  margin: auto;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 50px;
+  margin-top: 50px;
+  margin-right: 900px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.features img {
+  position: relative;
+  width: 25px;
+}
+
+.features #diablo-check {
+  display: flex;
+  justify-content: center;
+}
+
+.features #diablo-check img {
+  margin-left: 300px;
+  left: 105%;
+  bottom: 30px;
+}
+
+.features #diablo-check2 {
+  display: flex;
+  justify-content: center;
+}
+
+.features #diablo-check2 img {
+  margin-left: 300px;
+  left: 147%;
+  bottom: 30px;
+}
+
+.features #diablo-check3 {
+  display: flex;
+  justify-content: center;
+}
+
+.features #diablo-check3 img {
+  margin-left: 300px;
+  left: 189%;
+  bottom: 30px;
+}
+
+.features .tab {
+  background-color: #282828;
+  background-size: cover;
+}
